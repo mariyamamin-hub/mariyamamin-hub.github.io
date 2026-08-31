@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariyam Amin — Biomedical Engineer & Researcher</title>
+<meta name="description" content="Portfolio of Mariyam Amin, Biomedical Engineering researcher working on signal acquisition, rehabilitation sensing, and arrhythmia detection.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="signal-progress" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="nav-mark" href="#top">MA</a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="mailto:mariyamamin.edu@gmail.com">Get in touch</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker">Biomedical Engineering · UET Lahore</p>
+        <h1>Mariyam Amin</h1>
+        <p class="hero-role">Biomedical Engineering Student</p>
+        <p class="hero-bio">
+          I'm a biomedical engineering student interested in signal processing,
+          wearable sensors, and building tools that make medical data easier to understand
+          and act on. This site is a collection of my projects, research, and experience so far.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See my work</a>
+          <a class="btn btn-ghost" href="https://github.com/mariyamamin-hub" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn btn-ghost" href="mailto:mariyamamin.edu@gmail.com">Email me</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>4</dt><dd>biosignals instrumented<br>(ECG · PPG · EMG · Spirometry)</dd></div>
+          <div><dt>95.83%</dt><dd>accuracy, ECG arrhythmia model<br>on MIT-BIH database</dd></div>
+          <div><dt>3.62</dt><dd>CGPA / 4.0<br>6 semesters</dd></div>
+        </dl>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="waveform" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="70" x2="500" y2="70" class="grid-line"/>
+          <line x1="20" y1="160" x2="500" y2="160" class="grid-line"/>
+          <line x1="20" y1="250" x2="500" y2="250" class="grid-line"/>
+          <line x1="20" y1="340" x2="500" y2="340" class="grid-line"/>
+
+          <text x="20" y="50" class="wf-label wf-coral">ECG</text>
+          <path class="wf-path wf-coral" d="M20,70 L90,70 L102,70 L110,30 L118,105 L126,50 L134,70 L200,70 L215,70 L227,70 L235,30 L243,105 L251,50 L259,70 L330,70 L345,70 L357,70 L365,30 L373,105 L381,50 L389,70 L460,70 L500,70" />
+
+          <text x="20" y="140" class="wf-label wf-amber">PPG</text>
+          <path class="wf-path wf-amber" d="M20,160 C50,160 55,95 85,95 C115,95 120,180 150,180 C165,180 168,150 180,150 C210,150 215,95 245,95 C275,95 280,180 310,180 C325,180 328,150 340,150 C370,150 375,95 405,95 C435,95 440,180 470,180 C485,180 490,160 500,160" />
+
+          <text x="20" y="230" class="wf-label wf-violet">EMG</text>
+          <path class="wf-path wf-violet" d="M20,250 L45,250 L50,220 L55,270 L60,235 L65,255 L70,250 L150,250 L155,225 L160,265 L165,240 L170,255 L175,250 L260,250 L265,215 L270,275 L275,230 L280,258 L285,250 L370,250 L375,222 L380,268 L385,238 L390,255 L395,250 L500,250" />
+
+          <text x="20" y="320" class="wf-label wf-cyan">Spirometry</text>
+          <path class="wf-path wf-cyan" d="M20,340 C60,340 70,300 110,290 C150,280 170,300 190,320 C210,340 230,345 250,340 C290,340 300,300 340,290 C380,280 400,300 420,320 C440,340 460,345 480,340 L500,340" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="images/profile.jpg" alt="Portrait of Mariyam Amin" loading="lazy">
+      </div>
+      <div class="about-copy">
+        <h2>About</h2>
+        <p>
+          I'm a Biomedical Engineering student at the University of Engineering
+          and Technology, Lahore, with a research focus on physiological signal acquisition
+          and the algorithms that turn raw sensor data into clinically useful information.
+        </p>
+        <p>
+          My work spans hardware and software: wiring up ECG, PPG, EMG, IMU and spirometry
+          sensors on platforms like NI ELVIS, iWorx and Shimmer, then writing the MATLAB and
+          Python pipelines that clean, analyze and classify what they capture. Recent projects
+          include an adaptive ECG arrhythmia detector, a wearable rehabilitation sensing study
+          run with Mayo Hospital, and a vision-controlled prosthetic hand.
+        </p>
+        <p>
+          Outside the lab, I lead student organizations — from a debating society to a STEM
+          outreach initiative for girls — because I think engineering only matters if the
+          people around you can access it too.
+        </p>
+        <div class="about-facts">
+          <div class="fact">
+            <span class="fact-label">Education</span>
+            <span class="fact-value">BSc Biomedical Engineering, UET Lahore — 2023–2027</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Based in</span>
+            <span class="fact-value">Lahore, Pakistan</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Focus</span>
+            <span class="fact-value">Biomedical signal processing · wearable sensing · rehabilitation tech</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECT -->
+  <section class="section section-tint" id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="section-intro">Selected academic and independent work.</p>
+
+      <div class="featured-card">
+        <div class="featured-text">
+          <span class="fp-label">Featured · Open source</span>
+          <h3>Biomedical Signal Acquisition using NI ELVIS &amp; iWorx</h3>
+          <p>
+            Real-time acquisition, filtering and analysis of ECG, PPG, spirometry and EMG
+            signals at sampling rates up to 1,000 Hz, built on NI ELVIS II+ hardware with
+            iWorx sensors and a MATLAB / NI-DAQmx processing pipeline.
+          </p>
+          <div class="chip-row">
+            <span class="chip">NI ELVIS II+</span><span class="chip">iWorx</span><span class="chip">MATLAB</span>
+            <span class="chip">Signal Processing Toolbox</span>
+          </div>
+          <a class="btn btn-primary" href="https://github.com/mariyamamin-hub/Biomedical-signal-acquisition-using-NI-ELVIS-i-Worx" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+        <div class="featured-visual" aria-hidden="true">
+          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+            <path class="fp-wave" d="M0,100 L40,100 L48,100 L54,55 L60,150 L66,80 L72,100 L140,100 L150,100 L158,100 L164,55 L170,150 L176,80 L182,100 L260,100 L300,100" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <span class="project-year">Ongoing</span>
+          <h3>Wearable Upper-Limb Exoskeleton for Biomechanical Motion Assistance</h3>
+          <p>Final year project. Designing a wearable exoskeleton for upper-limb motion assistance, focused on joint actuation and ergonomic alignment.</p>
+        </article>
+
+        <article class="project-card">
+          <span class="project-year">2026</span>
+          <h3>Vision-Based Real-Time Prosthetic Hand Control</h3>
+          <p>Real-time, vision-controlled prosthetic hand achieving 94% gesture accuracy with under 150 ms latency.</p>
+          <div class="chip-row small">
+            <span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">MediaPipe</span><span class="chip">Arduino</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="project-year">2026</span>
+          <h3>Computational Modeling &amp; Simulation of Ultrasound Imaging</h3>
+          <p>Modeled ultrasound propagation, acoustic fields, RF signals and image reconstruction for biomedical imaging.</p>
+          <div class="chip-row small">
+            <span class="chip">MATLAB</span><span class="chip">SIMUS/MUST</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="project-year">2025</span>
+          <h3>Design of a Home-Based Wearable Monitoring System for Heart Failure Patients</h3>
+          <p>Problem-based learning project. Wearable cardiovascular monitoring architecture integrating arterial pressure and single-lead ECG acquisition.</p>
+          <div class="chip-row small">
+            <span class="chip">MEMS pressure sensor</span><span class="chip">AD8232</span><span class="chip">ADC</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="project-year">2025</span>
+          <h3>Biomechanical Modeling of Upper &amp; Lower Limb Kinematics</h3>
+          <p>Analyzed muscle forces, external loading, moment arms and joint torque during simulated flexion–extension.</p>
+          <div class="chip-row small">
+            <span class="chip">PASCO Structures</span><span class="chip">Force–time analysis</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="project-year">2025</span>
+          <h3>CRISPR-Cas9 Gene Editing Strategies in Glioblastoma</h3>
+          <p>Review article. Co-authored a review of CRISPR-Cas9 oncogene silencing, immune enhancement and blood-brain-barrier delivery strategies for glioblastoma therapy.</p>
+        </article>
+
+        <article class="project-card">
+          <span class="project-year">2024</span>
+          <h3>Surface EMG Signal Acquisition &amp; Muscle Activity Analysis</h3>
+          <p>Acquired and filtered surface EMG signals to isolate muscle activation patterns for physiological analysis.</p>
+        </article>
+
+        <article class="project-card">
+          <span class="project-year">2024</span>
+          <h3>IMU-Based Real-Time Posture Detection &amp; Feedback System</h3>
+          <p>C7–T1 IMU-based posture monitoring detecting spinal deviation beyond 30° sustained for 5 seconds, with corrective feedback.</p>
+          <div class="chip-row small">
+            <span class="chip">Arduino Uno</span><span class="chip">MPU6050</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Programming &amp; tools</h3>
+          <div class="chip-row">
+            <span class="chip">MATLAB</span><span class="chip">Python</span><span class="chip">C++</span>
+            <span class="chip">Arduino</span><span class="chip">Machine Learning</span><span class="chip">Fusion 360</span>
+            <span class="chip">Proteus</span><span class="chip">Material Studio</span><span class="chip">VS Code</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Python libraries</h3>
+          <div class="chip-row">
+            <span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span>
+            <span class="chip">Seaborn</span><span class="chip">Scikit-learn</span><span class="chip">Imbalanced-learn</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Bioinformatics</h3>
+          <div class="chip-row">
+            <span class="chip">NCBI</span><span class="chip">UniProt</span><span class="chip">Protein Data Bank</span><span class="chip">KEGG Pathway</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Coursework</h3>
+          <div class="chip-row">
+            <span class="chip">Biomechanics</span><span class="chip">Biomedical Instrumentation</span>
+            <span class="chip">Microprocessor Systems</span><span class="chip">Neuroscience &amp; Neural Networks</span>
+            <span class="chip">Biomaterials</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="section" id="leadership">
+    <div class="wrap">
+      <h2>Leadership &amp; extracurricular</h2>
+      <div class="leader-grid">
+        <article class="leader-card">
+          <span class="leader-org">Literary &amp; Debating Society, UET New Campus</span>
+          <h3>Vice President</h3>
+          <span class="leader-date">June 2026 – Present</span>
+          <p>Leading inter-university literary and debating competitions with 300+ registrations and 20+ participating institutions across Pakistan.</p>
+        </article>
+        <article class="leader-card">
+          <span class="leader-org">Muhandis</span>
+          <h3>Co-Founder</h3>
+          <span class="leader-date">2026</span>
+          <p>Co-founded a STEM education initiative delivering hands-on learning to underprivileged students, with a focus on empowering young girls to pursue engineering.</p>
+        </article>
+        <article class="leader-card">
+          <span class="leader-org">Hult Prize, UET Lahore</span>
+          <h3>Campus Director</h3>
+          <span class="leader-date">2024 – 2025</span>
+          <p>Selected from 10,000+ candidates and the first woman to hold the position in UET's history; the event ranked among the Top 3 entrepreneurial events nationally.</p>
+        </article>
+        <article class="leader-card">
+          <span class="leader-org">Alkhidmat Foundation</span>
+          <h3>Student Ambassador</h3>
+          <span class="leader-date">2024 – Present</span>
+          <p>Coordinated Punjab's largest MedCon with 1,500+ participants, represented the organization across 10+ initiatives, and led flood-relief fundraising campaigns.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES & HONORS -->
+  <section class="section section-tint" id="honors">
+    <div class="wrap honors-grid">
+      <div>
+        <h2>Certificates &amp; fellowships</h2>
+        <ul class="plain-list">
+          <li><strong>AI/ML Fellowship Program</strong> — ACM</li>
+          <li><strong>Prompt Engineering Research &amp; Integration Internship</strong> — Excelerate</li>
+          <li><strong>Bioinformatics Remote Internship</strong> — CodeAlpha</li>
+          <li><strong>Robotics, AI &amp; Industry 4.0 Innovation Lab Workshop</strong> — Rochester Institute of Technology</li>
+          <li><strong>Machine Learning for Healthcare Applications</strong> — Coursera</li>
+          <li><strong>MATLAB Onramp</strong> — MathWorks</li>
+          <li><strong>Effective Leadership within a Nutrition Response</strong> — UNICEF</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Honors &amp; achievements</h2>
+        <ul class="plain-list">
+          <li><strong>President's Merit Laptop</strong> — awarded by the Government of Pakistan for academic excellence.</li>
+          <li><strong>Award of Excellence</strong> — recognized by the Campus Coordinator for outstanding contribution to campus initiatives.</li>
+          <li><strong>1st Prize, Project Exhibition</strong> — Biomedical Engineering Project Exhibition.</li>
+          <li><strong>Scholarships</strong> — HSSC Merit-Based Scholarship (PKR 200,000); STEP (MDCAT) Scholarship; SSC Merit-Based Scholarship (Top 3, high school).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-inner">
+      <h2>Let's talk</h2>
+      <p>
+        Open to research collaborations, internships and roles in biomedical signal
+        processing, wearable sensing, or rehabilitation technology.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:mariyamamin.edu@gmail.com">mariyamamin.edu@gmail.com</a>
+        <a class="btn btn-ghost" href="https://github.com/mariyamamin-hub" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>Mariyam Amin — Biomedical Engineering, UET Lahore</span>
+    <span>Built with HTML, CSS &amp; JS</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
